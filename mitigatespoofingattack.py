@@ -9,6 +9,7 @@ class ThroughputMonitor(switchconfiguration.SimpleSwitch13):
 
     def __init__(self, *args, **kwargs):
         super(ThroughputMonitor, self).__init__(*args, **kwargs)
+        #collects the throughput in every switch
         self.flow_file = open('flow_throughput.csv', 'w')
         self.flow_file.write('Switch,Flow Rules,Throughput(bps)\n')
         self.flow_file.close()
